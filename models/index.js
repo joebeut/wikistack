@@ -27,6 +27,15 @@ pageSchema.virtual('full_route').get(function () {
   return '/wiki/' + this.url_name;
 });
 
+pageSchema.statics.pagelist = function(cb) {
+    this.find().limit( 20 ).exec( function( err, pages ) 
+    {
+        if( err ) return cb( err );
+
+        cb(null, pages);
+    });
+};
+
 Page = mongoose.model('Page', pageSchema);
 User = mongoose.model('User', userSchema);
 

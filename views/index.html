@@ -13,7 +13,7 @@
 		    </div>
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      	<ul class="nav navbar-nav">
-		        	<li><a class="text-uppercase" href="add.html"><small class="dark">{{link}}</small></a></li>
+		        	<li><a class="text-uppercase" href="/add"><small class="dark">{{link}}</small></a></li>
 		     	</ul>
 		    </div>
 		</div>
@@ -32,13 +32,15 @@
 {% block content %}
 <div class="container-fluid">
   	<div class="container col-lg-12">
-  		<ul>
-  			<li><a class="text-primary">{{index_list[0]}}</a></li>
-  			<li><a class="text-primary">{{index_list[1]}}</a></li>
-  			<li><a class="text-primary">{{index_list[2]}}</a></li>
-  			<li><a class="text-primary">{{index_list[3]}}</a></li>
-  			<li><a class="text-primary">{{index_list[4]}}</a></li>
-  		</ul>
+      {% if docs.length > 0 %}
+        <ul>
+          {% for doc in docs %}
+            <li>{{doc|page_link}}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        There are no pages. Why don't you <a href='/add'>add one</a>?
+      {% endif %}
     </div>
 </div>
 {% endblock %}
