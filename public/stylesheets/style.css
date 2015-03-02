@@ -1,8 +1,35 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+
+.dark {
+	background-color: #222222;
+	color: #cccccc;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.dark-text {
+	color: #222222;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+	color: #cccccc;
+}
+
+.container-fluid {
+	margin-left: 2em;
+}
+
+.title {
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: #cccccc;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+}
+
+.footer {
+	margin-top: 5em;
+	color: #cccccc;
 }

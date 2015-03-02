@@ -1,10 +1,15 @@
+<!-- layout.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title></title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>{% block page-title %}WikiStack{% endblock %}</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
   </head>
   <body>
-    {% block content %}{% endblock %}
+	{% block nav %}{% endblock %}
+	{% block title %}{% endblock %}
+	{% block content %}{% endblock %}
+	{% block footer %}{% endblock %}
   </body>
 </html>
