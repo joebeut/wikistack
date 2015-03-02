@@ -1,17 +1,26 @@
 var express = require('express');
 var router = express.Router();
 
+
+var bodyParser = require("body-parser");
+var title;
+var body;
+//Here we are configuring express to use body-parser as middle-ware.
+router.use(bodyParser.urlencoded({
+  extended: true
+}));
+
 router.get('/', function(req, res) {
   res.render('add', { title: 'Add A Page', name: 'WikiStack', link: "Add Page", footer: "WikiStack, Fullstack Academy" });
 });
 
 router.post('/submit', function(req, res) {
-  	var models = require('../models/');
+	var models = require('../models/');
 
   	// STUDENT ASSIGNMENT:
   	// add definitions of the `title`, `body` and `url_name` variables here
-	var title = "Page Title";
-	var body = "Page Content";
+	title = req.body.pageTitle;
+	body = req.body.pageContent;
 
 	var generateUrlName = function(name) {
 	  	if (typeof title != "undefined" && title !== "") {

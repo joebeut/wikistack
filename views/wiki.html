@@ -53,4 +53,49 @@
   		<p>{{footer}}</p>
     </div>
 </div>
+{% endblock %}{% extends "layout.html" %}
+
+{% block page-title %}
+  WikiStack
+{% endblock %}
+
+{% block nav %}
+<nav class="navbar navbar-default dark">
+    <div class="container-fluid">
+      <div class="container col-lg-12">
+        <div class="navbar-header">
+            <a class="navbar-brand text-uppercase dark" href="../"><p class="dark">{{name}}</p></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a class="text-uppercase" href="./add"><small class="dark">{{link}}</small></a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</nav>
+{% endblock %}
+
+{% block title %}
+<div class="container-fluid">
+    <div class="container col-lg-12">
+      <div class="title text-uppercase dark-text"><h1>{{title}}</h1></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="container col-lg-12">
+      <p>{{body}}</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="container-fluid">
+    <div class="container col-lg-12 footer">
+      <p>{{footer}}</p>
+    </div>
+</div>
 {% endblock %}
