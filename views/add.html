@@ -32,13 +32,17 @@
 {% block content %}
 <div class="container-fluid">
   	<div class="container col-lg-12">
-  		<ul>
-  			<li><a class="text-primary">{{index_list[0]}}</a></li>
-  			<li><a class="text-primary">{{index_list[1]}}</a></li>
-  			<li><a class="text-primary">{{index_list[2]}}</a></li>
-  			<li><a class="text-primary">{{index_list[3]}}</a></li>
-  			<li><a class="text-primary">{{index_list[4]}}</a></li>
-  		</ul>
+  		<form action="/add/submit" method="post">
+  			<div class="form-group">
+    			<label for="pageTitle" class="uppercase">Page Title</label>
+    			<input type="input" class="form-control" id="pageTitle">
+  			</div>
+  			<div class="form-group">
+    			<label for="pageContent" class="uppercase">Page Content</label>
+    			<input type="text-area" class="form-control text-area" id="pageContent">
+  			</div>
+  			<button type="submit" class="btn btn-primary">Submit</button>
+  		</form>
     </div>
 </div>
 {% endblock %}

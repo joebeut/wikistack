@@ -19,17 +19,22 @@ a {
 
 .container-fluid {
 	margin-left: 2em;
+	margin-right: 2em;
 }
 
 .title {
 	border-bottom-style: solid;
 	border-bottom-width: 2px;
 	border-bottom-color: #cccccc;
-	margin-bottom: 1em;
+	margin-bottom: 3em;
 	padding-bottom: 1em;
 }
 
 .footer {
 	margin-top: 5em;
 	color: #cccccc;
+}
+
+.text-area {
+	height: 10em;
 }
