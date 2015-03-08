@@ -13,4 +13,11 @@ module.exports = function(swig) {
   page_link.safe = true;
 
   swig.setFilter('page_link', page_link);
+
+  var marked = require('marked');
+  var markedFilter = function (body) {
+    return marked(body);
+  };
+  markedFilter.safe = true;
+  swig.setFilter('marked', markedFilter);
 };
